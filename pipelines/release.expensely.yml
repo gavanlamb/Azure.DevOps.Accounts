@@ -27,7 +27,7 @@ stages:
     variables:
       - group: terraform.infrastructure
     jobs:
-      - template: templates/tasks/plan-and-approve.yml
+      - template: pipelines/templates/tasks/plan-and-approve.yml@terraform-templates
         parameters:
           terraformVariablesFile: variables/expensely.terraform.tfvars
           terraformWorkspace: projects
