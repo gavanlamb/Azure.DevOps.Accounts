@@ -29,6 +29,8 @@ stages:
     jobs:
       - template: pipelines/templates/tasks/plan-and-approve.yml@terraform-templates
         parameters:
+          runInfracost: false
+          runTfsec: false
           terraformVariablesFile: variables/expensely.projects.tfvars
           terraformWorkspace: projects
           environment: Azure DevOps
