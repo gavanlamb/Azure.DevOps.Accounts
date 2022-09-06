@@ -4,7 +4,7 @@ azure_devops_projects = [
     description = "Shared resources for Expensely"
   },
   {
-    name = "Time"
+    name = "Kronos"
     description = "CICD assets for time domain"
   },
   {
