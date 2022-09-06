@@ -21,11 +21,11 @@ resource "azuredevops_project" "project" {
 }
 resource "azuredevops_environment" "production" {
   for_each = {for adp in var.azure_devops_projects:  adp.name => adp}
-  project_id = azuredevops_project.project[adp.key].id
+  project_id = azuredevops_project.project[each.key].id
   name = "Production"
 }
 resource "azuredevops_environment" "preview" {
   for_each = {for adp in var.azure_devops_projects:  adp.name => adp}
-  project_id = azuredevops_project.project[adp.key].id
+  project_id = azuredevops_project.project[each.key].id
   name = "Preview"
 }
