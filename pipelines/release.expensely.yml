@@ -1,0 +1,35 @@
+name: 1.0$(Rev:.r)
+
+resources:
+  repositories:
+    - repository: terraform-templates
+      type: github
+      name: expensely/infra-terraform-backend
+      endpoint: expensely
+
+pool:
+  vmImage: ubuntu-latest
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - "main"
+
+pr:
+  branches:
+    include:
+      - '*'
+
+stages:
+  - stage: terraform
+    displayName: Terraform
+    variables:
+      - group: terraform
+    jobs:
+      - template: templates/tasks/plan-and-approve.yml
+        parameters:
+          terraformVariablesFile: variables/expensely.terraform.tfvars
+          terraformWorkspace: projects
+          environment: Azure DevOps
+          terraformPlanAdditionalCommandOptions: -var="azure_devops_org_service_url=$(System.CollectionUri)" -var="azure_devops_personal_access_token=$(System.AccessToken)"
