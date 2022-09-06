@@ -29,7 +29,7 @@ stages:
     jobs:
       - template: pipelines/templates/tasks/plan-and-approve.yml@terraform-templates
         parameters:
-          terraformVariablesFile: variables/expensely.terraform.tfvars
+          terraformVariablesFile: variables/expensely.projects.tfvars
           terraformWorkspace: projects
           environment: Azure DevOps
           terraformPlanAdditionalCommandOptions: -var="azure_devops_org_service_url=$(System.CollectionUri)" -var="azure_devops_personal_access_token=$(System.AccessToken)"
