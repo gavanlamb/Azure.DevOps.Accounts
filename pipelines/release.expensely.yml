@@ -27,7 +27,7 @@ stages:
     variables:
       - group: terraform.infrastructure
     jobs:
-      - template: pipelines/templates/tasks/plan-and-approve.yml@terraform-templates
+      - template: pipelines/templates/plan-and-approve.yml@terraform-templates
         parameters:
           runInfracost: false
           runTfsec: false
