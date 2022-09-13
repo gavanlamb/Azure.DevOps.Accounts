@@ -8,7 +8,7 @@ azure_devops_projects = [
     description = "CICD assets for time domain"
   },
   {
-    name = "Security"
+    name = "User"
     description = "CICD assets for security"
   }
 ]
