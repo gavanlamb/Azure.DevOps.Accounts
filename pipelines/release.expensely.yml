@@ -32,6 +32,6 @@ stages:
           runInfracost: false
           runTfsec: false
           terraformVariablesFile: variables/expensely.projects.tfvars
-          terraformWorkspace: projects
+          terraformWorkspace: azure-devops
           environment: Azure DevOps
           terraformPlanAdditionalCommandOptions: -var="azure_devops_org_service_url=$(System.CollectionUri)" -var="azure_devops_personal_access_token=$(System.AccessToken)"
