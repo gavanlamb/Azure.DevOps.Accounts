@@ -25,7 +25,7 @@ stages:
   - stage: terraform
     displayName: Terraform
     variables:
-      - group: terraform.infrastructure
+      - group: terraform.platform
     jobs:
       - template: pipelines/templates/plan-and-approve.yml@terraform-templates
         parameters:
