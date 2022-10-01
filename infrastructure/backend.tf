@@ -1,10 +1,6 @@
 terraform {
   required_version = ">=1.2.5"
-  backend "s3" {
-    key = "terraform.tfstate"
-    encrypt = true
-    workspace_key_prefix = "azure-devops"
-  }
+  backend "s3" { }
 
   required_providers {
     aws = {
