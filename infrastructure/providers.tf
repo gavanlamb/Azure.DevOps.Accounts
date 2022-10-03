@@ -4,10 +4,12 @@ provider "aws" {
     role_arn = var.provider_role_arn
   }
   default_tags {
-    Application = "Expensely"
-    Team = "Platform"
-    ManagedBy = "Terraform"
-    Environment = "Terraform"
+    tags = {
+      Application = "Expensely"
+      Team = "Platform"
+      ManagedBy = "Terraform"
+      Environment = "Terraform"
+    }
   }
 }
 
