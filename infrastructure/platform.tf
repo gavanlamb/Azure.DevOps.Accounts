@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "platform_assume_policy" {
       "arn:aws:iam::829991159560:role/terraform.infrastructure",
       "arn:aws:iam::104633789203:role/terraform.infrastructure",
       "arn:aws:iam::172837312601:role/terraform.infrastructure",
-      "arn:aws:iam::266556396524:role/terraform.infrastructure"
+      "arn:aws:iam::266556396524:role/terraform.infrastructure",
     ]
   }
 }

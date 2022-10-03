@@ -85,7 +85,8 @@ data "aws_iam_policy_document" "shared_preview_assume_policy" {
     actions = ["sts:AssumeRole"]
     effect = "Allow"
     resources = [
-      "arn:aws:iam::151170476258:role/terraform.infrastructure"
+      "arn:aws:iam::151170476258:role/terraform.infrastructure",
+      "arn:aws:iam::258593516853:role/terraform.infrastructure"
     ]
   }
 }
@@ -162,7 +163,8 @@ data "aws_iam_policy_document" "shared_production_assume_policy" {
     actions = ["sts:AssumeRole"]
     effect = "Allow"
     resources = [
-      "arn:aws:iam::556018441473:role/terraform.infrastructure"
+      "arn:aws:iam::556018441473:role/terraform.infrastructure",
+      "aarn:aws:iam::258593516853:role/terraform.infrastructure"
     ]
   }
 }
